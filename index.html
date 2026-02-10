@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday Daddy ❤️</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #fff7f0;
+        text-align: center;
+        overflow-x: hidden;
+      }
+
+      /* HEADER */
+      #head {
+        margin: 20px auto;
+        padding: 16px;
+        width: 90%;
+        max-width: 340px;
+        background: #ffcab0;
+        border-radius: 18px;
+        font-size: 22px;
+        font-weight: 600;
+      }
+
+      /* CAKE */
+      .cake {
+        width: 260px;
+        height: 150px;
+        background: #d07a3a;
+        margin: 55px auto 10px;
+        border-radius: 0 0 28px 28px;
+        position: relative;
+        box-shadow: 0 14px 0 #b35e27;
+      }
+
+      /* ICING */
+      .icing {
+        position: absolute;
+        top: -22px;
+        width: 100%;
+        height: 45px;
+        background: #fff;
+        border-radius: 30px 30px 18px 18px;
+      }
+
+      /* NAME ON CAKE */
+      .name {
+        position: absolute;
+        top: 35px;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        color: #5a2a0c;
+      }
+
+      /* SPRINKLES */
+      .sprinkles span {
+        position: absolute;
+        width: 7px;
+        height: 3px;
+        border-radius: 3px;
+        top: 12px;
+      }
+      .sprinkles span:nth-child(1) {
+        left: 40px;
+        background: #ff6f61;
+      }
+      .sprinkles span:nth-child(2) {
+        left: 60px;
+        background: #ffd966;
+      }
+      .sprinkles span:nth-child(3) {
+        left: 80px;
+        background: #6fcf97;
+      }
+      .sprinkles span:nth-child(4) {
+        left: 100px;
+        background: #56ccf2;
+      }
+      .sprinkles span:nth-child(5) {
+        left: 120px;
+        background: #bb6bd9;
+      }
+      .sprinkles span:nth-child(6) {
+        left: 140px;
+        background: #f2994a;
+      }
+      .sprinkles span:nth-child(7) {
+        left: 160px;
+        background: #eb5757;
+      }
+      .sprinkles span:nth-child(8) {
+        left: 180px;
+        background: #27ae60;
+      }
+
+      /* CANDLES */
+      .candles {
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        position: absolute;
+        top: -60px;
+        width: 100%;
+      }
+
+      .candle {
+        width: 11px;
+        height: 42px;
+        background: repeating-linear-gradient(45deg, #ffd6d6, #ffd6d6 5px, #ff8a8a 5px, #ff8a8a 10px);
+        border-radius: 5px;
+        position: relative;
+      }
+
+      .flame {
+        width: 16px;
+        height: 22px;
+        background: radial-gradient(circle, #ffe066, #ff9f1c, #ff6f00);
+        border-radius: 50%;
+        position: absolute;
+        top: -22px;
+        left: -3px;
+        animation: flicker 0.12s infinite alternate;
+      }
+
+      @keyframes flicker {
+        from {
+          transform: scale(1) rotate(-2deg);
+          opacity: 0.85;
+        }
+        to {
+          transform: scale(1.15) rotate(2deg);
+          opacity: 1;
+        }
+      }
+
+      /* COUNTDOWN */
+      #countdown {
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 10px;
+      }
+
+      /* CARD */
+      #card {
+        display: none;
+        margin: 25px auto;
+        padding: 18px;
+        width: 230px;
+        background: #ffd6e0;
+        border-radius: 18px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+
+      /* GALLERY */
+      #gallery {
+        display: none;
+        margin-top: 20px;
+      }
+      #gallery img {
+        width: 90%;
+        max-width: 300px;
+        margin: 10px 0;
+        border-radius: 14px;
+      }
+
+      /* MESSAGE */
+      #message {
+        display: none;
+        padding: 20px;
+        font-size: 18px;
+        line-height: 1.6;
+      }
+
+      /* CONFETTI */
+      .confetti {
+        position: fixed;
+        top: -10px;
+        width: 8px;
+        height: 14px;
+        animation: fall 3s linear forwards;
+      }
+      @keyframes fall {
+        to {
+          transform: translateY(110vh) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="head">Happy Birthday Daddy 💖</div>
+
+    <audio id="music" loop>
+      <source src="music.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div id="cakeSection">
+      <div class="cake">
+        <div class="icing"></div>
+
+        <div class="sprinkles"><span></span><span></span><span></span><span></span> <span></span><span></span><span></span><span></span></div>
+
+        <div class="name">Praveen Verma</div>
+
+        <div class="candles">
+          <div class="candle"><span class="flame"></span></div>
+          <div class="candle"><span class="flame"></span></div>
+          <div class="candle"><span class="flame"></span></div>
+          <div class="candle"><span class="flame"></span></div>
+          <div class="candle"><span class="flame"></span></div>
+        </div>
+      </div>
+
+      <div id="countdown">Blow candles in 6</div>
+    </div>
+
+    <div id="card">🎁 Click Me</div>
+
+    <div id="gallery"><img src="1.jpg" /><img src="2.jpg" /><img src="3.jpg" /><img src="4.jpg" /><img src="5.jpg" /> <img src="6.jpg" /><img src="7.jpg" /><img src="8.jpg" /><img src="9.jpg" /><img src="10.jpg" /></div>
+
+    <div id="message">
+      <p>
+        Dear Daddy ❤️<br /><br />
+        You are my strength, my guide, and my forever hero. Everything good in me begins with you. I am forever proud to be your child.<br /><br />
+        Happy Birthday Daddy 🎂<br /><br />
+      </p>
+    </div>
+
+    <script>
+      /* MUSIC ON FIRST TOUCH (NO TEXT SHOWN) */
+      document.body.addEventListener(
+        "click",
+        () => {
+          document.getElementById("music").play();
+        },
+        { once: true },
+      );
+
+      /* CONFETTI */
+      function confettiBlast() {
+        for (let i = 0; i < 80; i++) {
+          const c = document.createElement("div");
+          c.className = "confetti";
+          c.style.left = Math.random() * 100 + "vw";
+          c.style.background = `hsl(${Math.random() * 360},80%,70%)`;
+          c.style.animationDuration = 2 + Math.random() * 2 + "s";
+          document.body.appendChild(c);
+          setTimeout(() => c.remove(), 4000);
+        }
+      }
+
+      /* COUNTDOWN */
+      let count = 6;
+      const countdown = document.getElementById("countdown");
+      const card = document.getElementById("card");
+
+      const timer = setInterval(() => {
+        count--;
+        if (count > 0) {
+          countdown.innerText = `Blow candles in ${count}`;
+        } else {
+          clearInterval(timer);
+          countdown.innerText = "Make a wish ✨";
+          document.querySelectorAll(".flame").forEach((f) => (f.style.display = "none"));
+          confettiBlast();
+          card.style.display = "block";
+        }
+      }, 1000);
+
+      /* CARD CLICK */
+      card.addEventListener("click", () => {
+        card.style.display = "none";
+        gallery.style.display = "block";
+        message.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
